@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>★おやすみ工作 クマのサキちゃん★ 公式ホームページ</title>
+  <style>
+    /* 2000年代初期のレトロWeb風スタイル */
+    body {
+      background-color: #fff8dc;
+      background-image: radial-gradient(#f0d890 1px, transparent 1px);
+      background-size: 16px 16px;
+      color: #4a2e1b;
+      font-family: "MS PGothic", "Hiragino Kaku Gothic ProN", sans-serif;
+      font-size: 14px;
+      margin: 0;
+      padding: 16px;
+    }
+
+    a {
+      color: #cc3300;
+      text-decoration: underline;
+    }
+    a:hover {
+      background-color: #ffeb99;
+    }
+
+    .main-table {
+      width: 720px;
+      margin: 0 auto;
+      background-color: #ffffff;
+      border: 3px double #d2691e;
+      border-collapse: collapse;
+    }
+
+    .header-cell {
+      background-color: #ffcc66;
+      border-bottom: 2px dashed #d2691e;
+      padding: 12px;
+      text-align: center;
+    }
+
+    .program-title {
+      font-size: 24px;
+      font-weight: bold;
+      color: #8b2500;
+      text-shadow: 2px 2px 0px #ffffff;
+      margin: 4px 0;
+    }
+
+    .sub-title {
+      font-size: 12px;
+      color: #5c3a21;
+    }
+
+    .counter-box {
+      display: inline-block;
+      background-color: #000000;
+      color: #00ff00;
+      font-family: "Courier New", monospace;
+      font-size: 16px;
+      font-weight: bold;
+      letter-spacing: 3px;
+      padding: 2px 8px;
+      border: 2px inset #888888;
+      margin-top: 6px;
+    }
+
+    .menu-cell {
+      width: 170px;
+      vertical-align: top;
+      background-color: #fff3d1;
+      border-right: 2px dashed #d2691e;
+      padding: 12px;
+    }
+
+    .menu-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .menu-list li {
+      margin-bottom: 10px;
+      padding-bottom: 6px;
+      border-bottom: 1px dotted #c99e67;
+    }
+
+    .content-cell {
+      vertical-align: top;
+      padding: 16px;
+      line-height: 1.7;
+    }
+
+    .section-box {
+      border: 1px solid #d2691e;
+      background-color: #fffdf7;
+      padding: 10px;
+      margin-bottom: 16px;
+    }
+
+    .section-heading {
+      background-color: #ffe0a3;
+      color: #7a2000;
+      font-weight: bold;
+      padding: 4px 8px;
+      margin: -10px -10px 10px -10px;
+      border-bottom: 1px solid #d2691e;
+    }
+
+    .new-badge {
+      color: #ff0000;
+      font-weight: bold;
+      font-size: 11px;
+      animation: blink 1s step-end infinite;
+    }
+
+    @keyframes blink {
+      50% { opacity: 0; }
+    }
+
+    .news-log {
+      height: 110px;
+      overflow-y: scroll;
+      border: 1px inset #cccccc;
+      background-color: #ffffff;
+      padding: 6px;
+      font-size: 12px;
+    }
+
+    .banner-box {
+      margin-top: 20px;
+      padding: 6px;
+      border: 1px solid #999999;
+      background-color: #f4f4f4;
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .footer-cell {
+      background-color: #f5deb3;
+      border-top: 1px solid #d2691e;
+      padding: 8px;
+      text-align: center;
+      font-size: 12px;
+    }
+
+    /* 隠しギミック発動時の不気味な反転スタイル */
+    body.glitched {
+      background-color: #110000;
+      color: #ff3333;
+    }
+    body.glitched .main-table,
+    body.glitched .section-box,
+    body.glitched .menu-cell {
+      background-color: #1a0000;
+      border-color: #990000;
+      color: #ff4444;
+    }
+  </style>
+</head>
+<body>
+
+<!--
+  ===================================================================
+  [制作メモ - 2000.11.04]
+  あの日からずっと時間が止まっている。
+  亜紀の誕生日も、血液型も、左手の小さなほくろも、全部バラバラになってしまった。
+  でも大丈夫。テレビの向こうから少しずつ集めれば、きっとまた会える。
+
+  ※番組アーカイブの未公開記録はこちら： /secret_aki.html
+  ===================================================================
+-->
+
+<table class="main-table">
+  <tr>
+    <td colspan="2" class="header-cell">
+      <div class="sub-title">テレビ武州 深夜の工作・おやすみプログラム</div>
+      <div class="program-title">★ おやすみ工作 クマのサキちゃん ★</div>
+      <marquee behavior="scroll" direction="left" scrollamount="4" style="background:#fff; border:1px solid #d2691e; padding:2px; margin:6px 0; font-size:12px;">
+        ♪ 毎週金曜 深夜25時30分〜放送中！ みんなのおたより・お絵かき募集中だよ ♪
+      </marquee>
+      <div style="font-size:12px;">
+        あなたは <span class="counter-box" id="counter">004192</span> 人目のおともだちです！
+      </div>
+    </td>
+  </tr>
+
+  <tr>
+    <!-- 左メニュー -->
+    <td class="menu-cell">
+      <ul class="menu-list">
+        <li>🐻 <a href="index.html">トップページ</a></li>
+        <li>📺 <a href="#about">サキちゃんとは？</a></li>
+        <li>📅 <a href="archive.html">これまでの放送記録</a> <span class="new-badge">NEW!</span></li>
+        <li>✉️ <a href="bbs.html">おたより掲示板</a></li>
+        <li>🎬 <a href="staff.html">スタッフ・制作</a></li>
+      </ul>
+
+      <div class="banner-box">
+        当サイトはリンクフリーです<br>
+        <div style="width:88px; height:31px; margin:6px auto; background:#ffcc66; border:1px solid #8b2500; line-height:31px; font-weight:bold; color:#8b2500;">
+          クマのサキちゃん
+        </div>
+        ※無断転載禁止
+      </div>
+    </td>
+
+    <!-- メインコンテンツ -->
+    <td class="content-cell">
+      <div class="section-box" id="about">
+        <div class="section-heading">■ クマのサキちゃんのご紹介</div>
+        <table style="width:100%; border-collapse:collapse;">
+          <tr>
+            <td style="width:150px; text-align:center; vertical-align:top;">
+              <!-- SVGで描画したレトロなクマのイラスト（クリックギミック付き） -->
+              <svg id="saki-illust" width="130" height="140" viewBox="0 0 130 140" style="border:1px solid #ccc; background:#fff7e6; cursor:pointer;" title="サキちゃん">
+                <!-- 耳 -->
+                <circle cx="35" cy="35" r="18" fill="#8b5a2b" stroke="#4a2e1b" stroke-width="2"/>
+                <circle cx="95" cy="35" r="18" fill="#8b5a2b" stroke="#4a2e1b" stroke-width="2"/>
+                <circle cx="35" cy="35" r="9" fill="#d2a679"/>
+                <circle cx="95" cy="35" r="9" fill="#d2a679"/>
+                <!-- 顔 -->
+                <ellipse cx="65" cy="65" rx="42" ry="38" fill="#8b5a2b" stroke="#4a2e1b" stroke-width="2"/>
+                <!-- 口元 -->
+                <ellipse cx="65" cy="75" rx="18" ry="14" fill="#f5deb3"/>
+                <circle cx="65" cy="69" r="5" fill="#2b180a"/>
+                <path d="M 55 80 Q 65 88 75 80" stroke="#2b180a" stroke-width="2" fill="none"/>
+                <!-- 目（少し不気味な正円） -->
+                <circle cx="48" cy="56" r="5" fill="#111111"/>
+                <circle cx="82" cy="56" r="5" fill="#111111"/>
+                <!-- 首元の赤いリボンと焦げ跡風のシミ -->
+                <path d="M 45 103 L 65 112 L 45 121 Z" fill="#cc0000"/>
+                <path d="M 85 103 L 65 112 L 85 121 Z" fill="#cc0000"/>
+                <circle cx="65" cy="112" r="5" fill="#990000"/>
+                <ellipse cx="82" cy="92" rx="10" ry="6" fill="#3b2314" opacity="0.75"/>
+              </svg>
+              <div style="font-size:11px; color:#777;">▲サキちゃん（7さい）</div>
+            </td>
+            <td style="vertical-align:top; padding-left:10px;">
+              森の奥からやってきた、工作が大好きなクマの男の子（？）。<br>
+              毎週、スタジオに遊びに来てくれたおともだちと一緒に、楽しい工作や絵描き歌をするよ！<br><br>
+              <div style="background:#fff0f0; border:1px dashed #cc0000; padding:6px; font-size:13px;">
+                <strong>★サキちゃんとのやくそく★</strong><br>
+                番組のさいごにサキちゃんが聞いたら、元気よく答えてね！<br>
+                <span style="color:#b30000; font-weight:bold;">「〇〇ちゃんのいちばん大切なもの、サキちゃんにわけてね」</span>
+              </div>
+            </td>
+          </tr>
+        </table>
+      </div>
+
+      <div class="section-box">
+        <div class="section-heading">■ 更新履歴（What's New!）</div>
+        <div class="news-log">
+          <strong>2003/09/26</strong> 第124回（最終回）の放送記録を追加しました。長い間ありがとうございました。<br>
+          <strong>2003/09/19</strong> おたより掲示板の書き込みを一部整理しました。<br>
+          <strong>2003/08/15</strong> 夏休み特別企画！スタジオ見学の募集は終了しました。<br>
+          <strong>2001/04/06</strong> 『おやすみ工作 クマのサキちゃん』公式ホームページ開設！
+        </div>
+      </div>
+
+      <div style="font-size:12px; color:#666666;">
+        ※このホームページは2003年9月の放送終了時のアーカイブ状態を保存しています。<br>
+        ※番組に関するお問い合わせは制作担当（佐久間）まで。
+      </div>
+    </td>
+  </tr>
+
+  <tr>
+    <td colspan="2" class="footer-cell">
+      Copyright (C) 2001-2003 テレビ武州 / 制作・著作：佐久間 恒一 All Rights Reserved.
+    </td>
+  </tr>
+</table>
+
+<script>
+  // 隠しギミック：サキちゃんのイラストを5回クリックすると画面が変質する
+  let clickCount = 0;
+  const sakiIllust = document.getElementById('saki-illust');
+  const counterEl = document.getElementById('counter');
+
+  sakiIllust.addEventListener('click', () => {
+    clickCount++;
+    if (clickCount === 5) {
+      document.body.classList.add('glitched');
+      counterEl.textContent = "20001104"; // 火災の日付に変化
+      alert("「……もうすぐ、あきちゃんに、あえるね」");
+    }
+  });
+</script>
+
+</body>
+</html>
