@@ -144,6 +144,18 @@
       font-size: 12px;
     }
 
+    /* サキちゃん写真のスタイル */
+    .saki-photo {
+      width: 145px;
+      height: 145px;
+      object-fit: cover;
+      border: 2px solid #c99e67;
+      background-color: #fff7e6;
+      cursor: pointer;
+      display: block;
+      margin: 0 auto;
+    }
+
     /* 隠しギミック発動時の不気味な反転スタイル */
     body.glitched {
       background-color: #110000;
@@ -156,6 +168,11 @@
       border-color: #990000;
       color: #ff4444;
     }
+    /* 裏モード発動時に写真も不気味な色調に変化させる */
+    body.glitched .saki-photo {
+      filter: contrast(190%) saturate(180%) hue-rotate(-35deg) brightness(65%);
+      border-color: #ff0000;
+    }
   </style>
 </head>
 <body>
@@ -164,7 +181,7 @@
   ===================================================================
   [制作メモ - 2000.11.04]
   あの日からずっと時間が止まっている。
-  亜紀の誕生日も、血液型も、左手の小さなほくろも、全部バラバラになってしまった。
+  亜紀の誕生日も、血液型も、左目の下の小さなほくろも、全部バラバラになってしまった。
   でも大丈夫。テレビの向こうから少しずつ集めれば、きっとまた会える。
 
   ※番組アーカイブの未公開記録はこちら： /secret_aki.html
@@ -211,30 +228,10 @@
         <div class="section-heading">■ クマのサキちゃんのご紹介</div>
         <table style="width:100%; border-collapse:collapse;">
           <tr>
-            <td style="width:150px; text-align:center; vertical-align:top;">
-              <!-- SVGで描画したレトロなクマのイラスト（クリックギミック付き） -->
-              <svg id="saki-illust" width="130" height="140" viewBox="0 0 130 140" style="border:1px solid #ccc; background:#fff7e6; cursor:pointer;" title="サキちゃん">
-                <!-- 耳 -->
-                <circle cx="35" cy="35" r="18" fill="#8b5a2b" stroke="#4a2e1b" stroke-width="2"/>
-                <circle cx="95" cy="35" r="18" fill="#8b5a2b" stroke="#4a2e1b" stroke-width="2"/>
-                <circle cx="35" cy="35" r="9" fill="#d2a679"/>
-                <circle cx="95" cy="35" r="9" fill="#d2a679"/>
-                <!-- 顔 -->
-                <ellipse cx="65" cy="65" rx="42" ry="38" fill="#8b5a2b" stroke="#4a2e1b" stroke-width="2"/>
-                <!-- 口元 -->
-                <ellipse cx="65" cy="75" rx="18" ry="14" fill="#f5deb3"/>
-                <circle cx="65" cy="69" r="5" fill="#2b180a"/>
-                <path d="M 55 80 Q 65 88 75 80" stroke="#2b180a" stroke-width="2" fill="none"/>
-                <!-- 目（少し不気味な正円） -->
-                <circle cx="48" cy="56" r="5" fill="#111111"/>
-                <circle cx="82" cy="56" r="5" fill="#111111"/>
-                <!-- 首元の赤いリボンと焦げ跡風のシミ -->
-                <path d="M 45 103 L 65 112 L 45 121 Z" fill="#cc0000"/>
-                <path d="M 85 103 L 65 112 L 85 121 Z" fill="#cc0000"/>
-                <circle cx="65" cy="112" r="5" fill="#990000"/>
-                <ellipse cx="82" cy="92" rx="10" ry="6" fill="#3b2314" opacity="0.75"/>
-              </svg>
-              <div style="font-size:11px; color:#777;">▲サキちゃん（7さい）</div>
+            <td style="width:160px; text-align:center; vertical-align:top;">
+              <!-- 番組マスコット写真（クリックギミック付き） -->
+              <img id="saki-illust" class="saki-photo" src="saki.jpg" alt="クマのサキちゃん" title="サキちゃん">
+              <div style="font-size:11px; color:#777; margin-top:4px;">▲サキちゃん（7さい）</div>
             </td>
             <td style="vertical-align:top; padding-left:10px;">
               森の奥からやってきた、工作が大好きなクマの女の子（？）。<br>
@@ -274,7 +271,7 @@
 </table>
 
 <script>
-  // 隠しギミック：サキちゃんのイラストを5回クリックすると画面が変質する
+  // 隠しギミック：サキちゃんの写真を5回クリックすると画面が変質する
   let clickCount = 0;
   const sakiIllust = document.getElementById('saki-illust');
   const counterEl = document.getElementById('counter');
